@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:myapp/login/registro.dart';
 import 'package:myapp/login/home.dart';
 
-class Login extends StatefulWidget {
+class LoginScreen extends StatefulWidget {
   @override
-  _LoginState createState() => _LoginState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginState extends State<Login> {
+class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   bool _passwordVisible = false;
@@ -22,7 +22,7 @@ class _LoginState extends State<Login> {
     final email = emailController.text;
     final password = passwordController.text;
 
-    if (email == 'ajcastro@unah.hn' && password == 'Castro_112233!') {
+    if (email == 'ajcastron@unah.hn' && password == '20192002956') {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => HomeScreen(email)),
