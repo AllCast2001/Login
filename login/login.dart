@@ -46,7 +46,8 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             TextField(
               controller: emailController,
-              decoration: InputDecoration(labelText: 'Correo institucional',border: OutlineInputBorder())  
+              decoration: InputDecoration(labelText: 'Correo institucional',icon: Icon(Icons.email),iconColor: Color(Colors.white.value)
+              )  
               
             ),
             TextField(
@@ -54,23 +55,39 @@ class _LoginScreenState extends State<LoginScreen> {
               obscureText: !_passwordVisible,
               decoration: InputDecoration(
                 labelText: 'Contraseña',
-                border: OutlineInputBorder(),
+                icon: Icon(Icons.lock), 
+                iconColor: Color(Colors.white.value),
                 
 
-                
                 suffixIcon: IconButton(
                   icon: Icon(
-                    _passwordVisible ? Icons.visibility : Icons.visibility_off,
+                    _passwordVisible ? Icons.visibility : Icons.visibility_off, 
                   ),
                   onPressed: _togglePasswordVisibility,
                 ),
               ),
             ),
+            Container(
+              margin: EdgeInsets.only(top: 50.0),
+              ),
             ElevatedButton(
-              
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:3157757786.
+              style: ButtonStyle(
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:1704054974.
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:2797474911.
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:568404719.
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:683820758.
+                backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 255, 255, 255)),foregroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 0, 0, 0)),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+
+                ),
               onPressed: _login,
               child: Text('Iniciar sesión')
-              
+        
             ),
             TextButton(
               onPressed: () {
