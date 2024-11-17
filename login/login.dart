@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       
       appBar: AppBar(title: Text('Iniciar sesión'),foregroundColor: const Color.fromARGB(255, 255, 255, 255),backgroundColor: const Color.fromARGB(255, 0, 0, 0),),
       body: Padding(
@@ -46,8 +46,9 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             TextField(
               controller: emailController,
-              decoration: InputDecoration(labelText: 'Correo institucional',icon: Icon(Icons.email),iconColor: Color(Colors.white.value)
+              decoration: InputDecoration(labelText: 'Correo institucional',icon: Icon(Icons.email),iconColor: Color(const Color.fromARGB(255, 0, 0, 0).value)
               )  
+         
               
             ),
             TextField(
@@ -56,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
               decoration: InputDecoration(
                 labelText: 'Contraseña',
                 icon: Icon(Icons.lock), 
-                iconColor: Color(Colors.white.value),
+                iconColor: Color(const Color.fromARGB(255, 0, 0, 0).value),
                 
 
                 suffixIcon: IconButton(
@@ -68,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 50.0),
+              margin: EdgeInsets.only(top: 40.0),
               ),
             ElevatedButton(
 // Suggested code may be subject to a license. Learn more: ~LicenseLog:3157757786.
