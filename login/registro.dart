@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../validators/validator.dart';
 
-class RegisterScreen extends StatefulWidget {
+class Registrarse extends StatefulWidget {
   @override
   _RegisterScreenState createState() => _RegisterScreenState();
 }
 
-class _RegisterScreenState extends State<RegisterScreen> {
+class _RegisterScreenState extends State<Registrarse> {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
