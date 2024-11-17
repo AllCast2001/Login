@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../validators/validator.dart';
 
-class Registrarse extends StatefulWidget {
+class RegisterScreen extends StatefulWidget {
   @override
-  _RegistrarseScreenState createState() => _RegistrarseScreenState();
+  _RegisterScreenState createState() => _RegisterScreenState();
 }
 
-class _RegistrarseScreenState extends State<Registrarse> {
+class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
@@ -56,5 +56,56 @@ class _RegistrarseScreenState extends State<Registrarse> {
     }
 
     return true;
+  }
+
+  void _register() {
+    if (_validateForm()) {
+      print('Nombre: ${nameController.text}');
+      print('Correo: ${emailController.text}');
+      print('Teléfono: ${phoneController.text}');
+      print('Contraseña: ${passwordController.text}');
+      Navigator.pop(context);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Registro')),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextField(
+              controller: nameController,
+              decoration: InputDecoration(labelText: 'Nombre'),
+            ),
+            TextField(
+              controller: emailController,
+              decoration: InputDecoration(labelText: 'Correo'),
+            ),
+            TextField(
+              controller: phoneController,
+              decoration: InputDecoration(labelText: 'Teléfono'),
+              keyboardType: TextInputType.phone,
+            ),
+            TextField(
+              controller: passwordController,
+              obscureText: true,
+              decoration: InputDecoration(labelText: 'Contraseña'),
+            ),
+            TextField(
+              controller: confirmPasswordController,
+              obscureText: true,
+              decoration: InputDecoration(labelText: 'Confirmar contraseña'),
+            ),
+            ElevatedButton(
+              onPressed: _register,
+              child: Text('Registrarse'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
