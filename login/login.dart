@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home.dart';
+
 class Login extends StatefulWidget {
   @override
   _LoginState createState() => _LoginState();
@@ -20,7 +22,7 @@ class _LoginState extends State<Login> {
     final email = emailController.text;
     final password = passwordController.text;
 
-    if (email == 'ajcastro@unah.hn' && password == 'Castro_112233!') {
+    if (email == 'ajcastro@unah.hn' && password == '20192002956') {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => HomeScreen(email)),
