@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'registro.dart';
-import 'home.dart';
+import 'package:myapp/login/registro.dart';
+import 'package:myapp/login/home.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -22,7 +22,7 @@ class _LoginState extends State<Login> {
     final email = emailController.text;
     final password = passwordController.text;
 
-    if (email == 'ajcastro@unah.hn' && password == '20192002956') {
+    if (email == 'ajcastro@unah.hn' && password == 'Castro_112233!') {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => HomeScreen(email)),
@@ -67,7 +67,7 @@ class _LoginState extends State<Login> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => RegisterScreen()),
+                  MaterialPageRoute(builder: (context) => Registrarse()),
                 );
               },
               child: Text('¿No tienes cuenta? Regístrate'),

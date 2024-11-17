@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class Principal extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
   final String email;
 
-  Principal(this.email);
+  HomeScreen(this.email);
 
   @override
   Widget build(BuildContext context) {
