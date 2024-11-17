@@ -37,20 +37,27 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Iniciar sesión')),
+      backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+      
+      appBar: AppBar(title: Text('Iniciar sesión'),foregroundColor: const Color.fromARGB(255, 255, 255, 255),backgroundColor: const Color.fromARGB(255, 0, 0, 0),),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(35.0),
         child: Column(
           children: [
             TextField(
               controller: emailController,
-              decoration: InputDecoration(labelText: 'Correo institucional'),
+              decoration: InputDecoration(labelText: 'Correo institucional',border: OutlineInputBorder())  
+              
             ),
             TextField(
               controller: passwordController,
               obscureText: !_passwordVisible,
               decoration: InputDecoration(
                 labelText: 'Contraseña',
+                border: OutlineInputBorder(),
+                
+
+                
                 suffixIcon: IconButton(
                   icon: Icon(
                     _passwordVisible ? Icons.visibility : Icons.visibility_off,
@@ -60,8 +67,10 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             ElevatedButton(
+              
               onPressed: _login,
-              child: Text('Iniciar sesión'),
+              child: Text('Iniciar sesión')
+              
             ),
             TextButton(
               onPressed: () {
